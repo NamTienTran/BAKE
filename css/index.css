@@ -6,11 +6,64 @@
     box-sizing: border-box;
 }
 html{
-    font-size: 16px;
+    font-size: 16px; 
+    /*font-size ở html khai báo bao nhiêu thì giá trị đó là 1 rem*/
+    /* Không khai báo thì mặc định 1 rem = 16px  */
 }
 body{
     font-family: "Montserrat", sans-serif;
     color: #212529;
     background-color: white;
     letter-spacing: 1px;
+}
+
+/* HEADER */
+header{
+    background-color: #4e2a84;
+    padding: 20px o;
+}
+
+.header__content{
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__content ul{
+    list-style: none;
+}
+
+.header__content ul li{
+    display: inline;
+    margin: 0 1rem;
+}
+
+.header__content ul a{
+    text-decoration: none;
+    color: white;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 1s;
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: linear; */
+}
+
+.header__content ul a:hover{
+    color: #ff0e83;
+}
+
+.header__content p{
+    color: white;
+    font-size: 2.3rem;
+}
+
+.header__content ul .active a{
+    color: #ff0e83;
 }
