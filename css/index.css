@@ -136,3 +136,47 @@ header{
     /* grid-column: 3/5; */
     grid-column: 3 /span 2;
 }
+
+.intro__item img{
+    width: 100%;
+    display: block;
+}
+
+.intro__item{
+    display: flex;
+    align-items: center;
+    text-align: center; /*ở đây không sử dụng justify-content: center do không cần thiết, chỉ dùng khi thẻ con nhỏ hơn thẻ cha, và vẫn còn khoảng trống*/   
+}
+
+.intro__text{
+    padding: 0 32px;
+}
+
+.intro__item h3{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.intro__item p{
+    font-size: 0.875rem;
+    color: #c1c1c1;
+    line-height: 29px; /*áp dụng cho khoảng cách dòng trong 1 đoạn văn bản*/
+}
+
+.intro .intro__item:first-child, .intro .intro__item:nth-child(8){
+    background-color: #4e2a84;
+}
+
+.intro .intro__item:nth-child(3){
+    background-color: #ff0e83;
+}
+
+.intro .intro__item:nth-child(4){
+    background-color: #ed6498;
+}
+
+.intro .intro__item:nth-child(6){
+    background-color: #836eaa;
+}
