@@ -246,6 +246,7 @@ header{
     background-color: white;
     color: #4e2a84;
     font-size: 3.87rem;
+    transition: all 0.5s;
 }
 
 .services__item h3{
@@ -258,4 +259,13 @@ header{
     font-size: 0.875rem;
     line-height: 25px;
     margin-bottom: 12px;
+}
+
+.services__item button{
+    padding: 12px 27px;
+    border-width: 2px;
+}
+
+.services__item:hover i{
+    color: #ff0e83;
 }
