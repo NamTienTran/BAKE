@@ -16,6 +16,11 @@
 
     <!-- LIGHTBOX CSS -->
     <link rel="stylesheet" href="./css/lightbox.min.css">
+
+    <!-- OWL CSS --> <!-- chú ý khai báo đúng thứ tự file css -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -317,8 +322,27 @@
     <!-- FEEDBACK -->
     <section class="feedback">
         <h2>TESTIMONIALS</h2>
-        <div class="feedback__contain">
-            
+        <div class="feedback__content">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                        iusto hic inventore facilis nemo quae corrupti eius itaque, temporibus sapiente? <i
+                            class="fa fa-quote-right"></i></p>
+                    <p class="feeback__name">MARK</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                        iusto hic inventore facilis nemo quae corrupti eius itaque, temporibus sapiente? <i
+                            class="fa fa-quote-right"></i></p>
+                    <p class="feeback__name">ALLY</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                        iusto hic inventore facilis nemo quae corrupti eius itaque, temporibus sapiente? <i
+                            class="fa fa-quote-right"></i></p>
+                    <p class="feeback__name">WILLSON</p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- CONTACT -->
@@ -342,6 +366,28 @@
 
     <!-- LIGHTBOX JS -->
     <script src="./js/lightbox.min.js"></script>
+
+    <!-- OWL JS -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,  //bật tắt nút bấm qua lại
+            autoplay: true,
+            responsive: {    //chế độ hiển thị item, màn hình từ 0-600px sẽ hiển thị 1 item, từ 600-1000px hiển thị 3 item, hơn 1000px sẽ hiển thị 5 item, ở đây mình chỉ cần hiển thị 1 item
+                0: {
+                    items: 1
+                },
+                // 600: {
+                //     items: 3
+                // },
+                // 1000: {
+                //     items: 5
+                // }
+            }
+        })
+    </script>
 </body>
 
 </html>
