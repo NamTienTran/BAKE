@@ -9,6 +9,7 @@ html{
     font-size: 16px; 
     /*font-size ở html khai báo bao nhiêu thì giá trị đó là 1 rem*/
     /* Không khai báo thì mặc định 1 rem = 16px  */
+    scroll-behavior: smooth; /*giúp website trượt mượt mà*/
 }
 body{
     font-family: "Montserrat", sans-serif;
@@ -47,6 +48,9 @@ h2{
 header{
     background-color: #4e2a84;
     padding: 20px 0;
+    position: fixed; /*cố định header khi trượt website về cuối*/
+    width: 100%;
+    z-index: 9999;  /*khi sử dụng position, số index lớn sẽ nổi lên trên, mà header được tạo đầu tiên nên số index sẽ là nhỏ nhất, do đó phải set lại index của header thì header mới nổi lên các đối tượng khác có áp dụng position*/ 
 }
 
 .header__content{
@@ -682,6 +686,8 @@ footer{
     position: fixed;
     right: 50px;
     bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .backToTop i{
@@ -694,3 +700,9 @@ footer{
     line-height: 36px;
     border-radius: 50%;
 }
+
+ .cd-top--is-visible { /* back-to-top button visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  

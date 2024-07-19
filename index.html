@@ -31,13 +31,13 @@
         <div class="header__content">
             <p>BAKE</p>
             <nav>
-                <ul>
+                <ul id="mainNav">
                     <li class="active"><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CLIENTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#intro">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#feedback">CLIENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,7 +51,7 @@
         </div>
     </section>
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="intro__item intro__text">
             <div>
                 <h3>Tradition</h3>
@@ -122,7 +122,7 @@
         </div>
     </section>
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services" id="services">
         <h2>OUR SERVICES</h2>
         <div class="services__content">
             <div class="services__item">
@@ -152,7 +152,7 @@
         </div>
     </section>
     <!-- GALLERY -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <h2>OUR GALLERY</h2>
         <div class="gallery__content">
             <figure class="gallery__item gallery__g1"><!-- thẻ ngữ nghĩa trong HTML5 dùng cho hình ảnh -->
@@ -320,7 +320,7 @@
         </div>
     </section>
     <!-- FEEDBACK -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         <h2>TESTIMONIALS</h2>
         <div class="feedback__content">
             <div class="owl-carousel owl-theme">
@@ -346,7 +346,7 @@
         </div>
     </section>
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>CONTACT</h2>
         <div class="contact__form">
             <form action="">
@@ -359,7 +359,10 @@
             </form>
         </div>
         <div class="contact__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.428056091159!2d106.69874467481824!3d10.778490559156117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f48e2836f13%3A0xe35c9149243f0934!2zMjIgTMO9IFThu7EgVHLhu41uZywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1721113502993!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.428056091159!2d106.69874467481824!3d10.778490559156117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f48e2836f13%3A0xe35c9149243f0934!2zMjIgTMO9IFThu7EgVHLhu41uZywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1721113502993!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="contact__info">
             <div class="contact__item">
@@ -384,7 +387,8 @@
         <div class="footer__main">
             <div class="footer__item">
                 <h3>About Us</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adispisicing elit. Eum, natus illo. Consequatur maiores veniam est.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adispisicing elit. Eum, natus illo. Consequatur maiores
+                    veniam est.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, laborum.</p>
                 <div class="footer__socials">
                     <i class="fab fa-facebook-f"></i>
@@ -432,7 +436,8 @@
                     <input type="email" placeholder="name@example.com">
                     <button type="submit">Sent</button>
                 </form>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione enim soluta at voluptate vitae quae ommis tempora, voluptas sint corrupti</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione enim soluta at voluptate vitae quae
+                    ommis tempora, voluptas sint corrupti</p>
             </div>
         </div>
         <div class="footer__copyright">
@@ -441,7 +446,7 @@
     </footer>
 
     <!-- Back to top -->
-    <a href="#" class="backToTop">
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
         <i class="fa fa-angle-up"></i>
     </a>
     <!-- Thư viện hỗ trợ Jquery giúp chạy hiệu ứng của các thư viện animation -->
@@ -482,6 +487,30 @@
             }
         })
     </script>
+    <!-- Back to Top JS -->
+    <script src="./js/util.js"></script>
+    <script src="./js/main-backToTop.js"></script>
+
+    <!-- Navigation bar JS -->
+    <script>
+        //Thẻ ul
+        var mainNav = document.getElementById("mainNav");
+        //các thẻ con li
+        var listNav = mainNav.getElementsByTagName("li");
+        for (var i = 0; i < listNav.length; i++) {
+            listNav[i].addEventListener("click", function () {
+                //tìm thẻ đang được gắn class active
+                var current = document.querySelector("#mainNav .active");
+                //XÓa class active của thẻ đang được gắn
+                current.className = current.className.replace("active", "");
+                //thêm class active vào cho thẻ li được click
+                this.className+="active";
+            });
+        }
+
+    </script>
+
+    <nav></nav>
 </body>
 
 </html>
