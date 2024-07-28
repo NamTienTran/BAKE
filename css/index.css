@@ -463,6 +463,40 @@ header{
     opacity: 1;
 }
 
+.team__item2{
+    overflow: hidden; /*thuộc tính ẩn đi thành phần thẻ con nằm ngoài phần giới hạn của thẻ cha*/
+}
+
+.team__item2 .team__details{
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.team__item2:hover .team__details{
+    transform: translateX(0);
+}
+
+.team__item3{
+    overflow: hidden; /*thuộc tính ẩn đi thành phần thẻ con nằm ngoài phần giới hạn của thẻ cha*/
+}
+
+.team__item3 .team__details{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.team__item3:hover .team__details{
+    transform: translateY(0);
+}
+
+.team__item4 .team__details{
+    /* opacity: 1; */
+    transform: rotate(0);
+}
+
+.team__item4:hover .team__details{
+    transform: rotate(360deg);
+}
 /* FEEDBACK */
 .feedback{
     background-image: url("../img/cc1.jpg");
