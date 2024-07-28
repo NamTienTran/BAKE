@@ -9,6 +9,7 @@ html{
     font-size: 16px; 
     /*font-size ở html khai báo bao nhiêu thì giá trị đó là 1 rem*/
     /* Không khai báo thì mặc định 1 rem = 16px  */
+    scroll-behavior: smooth; /*giúp website trượt mượt mà*/
 }
 body{
     font-family: "Montserrat", sans-serif;
@@ -47,6 +48,9 @@ h2{
 header{
     background-color: #4e2a84;
     padding: 20px 0;
+    position: fixed; /*cố định header khi trượt website về cuối*/
+    width: 100%;
+    z-index: 9999;  /*khi sử dụng position, số index lớn sẽ nổi lên trên, mà header được tạo đầu tiên nên số index sẽ là nhỏ nhất, do đó phải set lại index của header thì header mới nổi lên các đối tượng khác có áp dụng position*/ 
 }
 
 .header__content{
@@ -542,3 +546,197 @@ header{
 .feedback__content .owl-theme .owl-dots .owl-dot:focus{
     outline: none;
 }
+
+/* CONTACT */
+.contact{
+    padding: 70px;
+}
+
+.contact__form form{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px 30px;
+}
+
+.contact__form textarea, .contact__form button{
+    /* grid-column: 1/3; */
+    grid-column: 1/ span 2;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact__form input{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.contact__form input:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.contact__form textarea{
+    border: 1px solid black;
+    resize: none;
+}
+
+.contact__form textarea:focus{
+    outline: none;
+}
+
+.contact__form textarea::placeholder{
+    color: black;
+}
+
+.contact__form button{
+    border-radius: 0;
+    color: black;
+}
+
+.contact__form button:hover{
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.contact__map iframe{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contact__info{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact__info i{
+    font-size: 2rem;
+    color: #4e2a84;
+}
+
+.contact_info p{
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer{
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+}
+
+.footer__main{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.footer__item{
+    width: 25%;
+    padding: 0 20px;
+}
+
+.footer__item h3{
+    color: #ff0e83;
+    margin-bottom: 1rem;
+}
+
+.footer__item p{
+    font-size: 0.8rem;
+    line-height: 28px;
+    padding-bottom: 1rem;
+}
+
+.footer__socials i{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+
+.footer__socials i:hover{
+    color: #ff0e83;
+    border-color: #ff0e83;
+}
+
+.footer__time{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted white;
+}
+
+.footer__time p{
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer__item .footer__sub input{
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.footer__item .footer__sub input:focus{
+    outline: none;
+}
+
+.footer__item .footer__sub button{
+    padding: 7px 16px;
+    color: black;
+    border-color: #ff0e83;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.footer__item .footer__sub button:hover{
+    border-color: black;
+}
+
+.footer__copyright{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer__copyright span{
+    color: #ff0e83;
+}
+
+.backToTop{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.backToTop i{
+    font-size: 2rem;
+    color: #0BBBCC;
+    border: 2px solid #0BBBCC;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+}
+
+ .cd-top--is-visible { /* back-to-top button visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  
