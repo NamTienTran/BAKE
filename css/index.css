@@ -121,6 +121,26 @@ header{
     padding: 23px 0;
 }
 
+.carousel button:hover {
+    /* animation: upDown 1s linear 0s infinite; */
+    /* name: tên function
+    duration: thời gian 1 chu kỳ chuyển động
+    timing-function: cho biết hình thức thay đổi của chuyển động: ease, linear, ease-in, ease-out, ease-n-out
+    delay: thời gian chờ
+    iteration
+     */
+     /* animation: upDown2 1s linear 0s infinite; */
+}
+
+.carousel__content:hover button{
+    /* animation: upDown3 2s 1 reverse; */
+    /* animation: upDown3 2s 2 alternate; */
+    /* animation: upDown3 2s 2 alternate-reverse; */
+    /* animation: upDown3 2s 1 forwards; */
+    /* animation: upDown3 2s 1s backwards; */
+    animation: upDown3 2s 1s both;
+}
+
 /* INTRO */
 .intro{
     display: grid;
@@ -501,6 +521,23 @@ header{
     transform: translateY(0);
 }
 
+.team__item5{
+    overflow: hidden;/*thuộc tính giúp cho các phần tử con bên trong ẩn đi các kích thước nằm ngoài phạm vi của class cha*/
+}
+
+.team__item5 .team__details{
+    /* opacity: 1; */
+    transform: scale(0);
+}
+
+.team__item5:hover .team__details{
+    transform: scale(1);
+}
+
+/* .team__item6 .team__details{
+    opacity: 1;
+    transform: skewX(30deg);
+} */
 /* FEEDBACK */
 .feedback{
     background-image: url("../img/cc1.jpg");
@@ -738,5 +775,37 @@ footer{
  .cd-top--is-visible { /* back-to-top button visible */
     visibility: visible;
     opacity: 1;
-  }
-  
+}
+
+/* khai báo chuỗi chuyển động */
+@keyframes upDown{
+    0%{}
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes upDown2{
+    /* 100s */
+    from{
+        transform: translateY(0)
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+@keyframes upDown3{
+    /* 100s */
+    from{
+        transform: translateY(0);
+        background-color: red;
+    }
+    to{
+        transform: translateY(50px);
+        background-color: yellow;
+    }
+}
