@@ -468,7 +468,11 @@ header{
 }
 
 .team__item2{
+<<<<<<< HEAD
     overflow: hidden; /*thuộc tính ẩn đi thành phần thẻ con nằm ngoài phần giới hạn của thẻ cha*/
+=======
+    overflow: hidden;/*thuộc tính giúp cho các phần tử con bên trong ẩn đi các kích thước nằm ngoài phạm vi của class cha*/
+>>>>>>> f5f4a8d69672922ded113218cb2719a400959c03
 }
 
 .team__item2 .team__details{
@@ -480,15 +484,32 @@ header{
     transform: translateX(0);
 }
 
+<<<<<<< HEAD
 .team__item3{
     overflow: hidden; /*thuộc tính ẩn đi thành phần thẻ con nằm ngoài phần giới hạn của thẻ cha*/
 }
 
 .team__item3 .team__details{
+=======
+.team__item3 .team__details{
+    transform: rotate(0);
+}
+
+.team__item3:hover .team__details{
+    transform: rotate(360deg);
+}
+
+.team__item4{
+    overflow: hidden;/*thuộc tính giúp cho các phần tử con bên trong ẩn đi các kích thước nằm ngoài phạm vi của class cha*/
+}
+
+.team__item4 .team__details{
+>>>>>>> f5f4a8d69672922ded113218cb2719a400959c03
     opacity: 1;
     transform: translateY(-100%);
 }
 
+<<<<<<< HEAD
 .team__item3:hover .team__details{
     transform: translateY(0);
 }
@@ -501,6 +522,12 @@ header{
 .team__item4:hover .team__details{
     transform: rotate(360deg);
 }
+=======
+.team__item4:hover .team__details{
+    transform: translateY(0);
+}
+
+>>>>>>> f5f4a8d69672922ded113218cb2719a400959c03
 /* FEEDBACK */
 .feedback{
     background-image: url("../img/cc1.jpg");
